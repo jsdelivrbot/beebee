@@ -1,0 +1,25 @@
+{
+  "name": "beebee",
+  "version": "1.0.2",
+  "description": "a beebee sees mister countdown timer",
+  "main": "server.js",
+  "scripts": {
+    "setup": "npm i && jspm i",
+    "build:css": "stylus assets/stylus/app.styl --out assets/css --sourcemap --compress",
+    "watch:css": "stylus assets/stylus/app.styl --out assets/css --sourcemap --compress --watch",
+    "build:js": "jspm bundle-sfx main dist/main-built.js",
+    "build": "npm run build:css && npm run build:js",
+    "start": "node server.js"
+  },
+  "author": "Tim Moran",
+  "license": "MIT",
+  "devDependencies": {
+    "jspm": "^0.16.13"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "react": "^0.14.0",
+    "stylus": "^0.52.4",
+    "react-dom": "^0.14.0"
+  }
+}
