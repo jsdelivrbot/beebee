@@ -28,7 +28,7 @@ export default class Countdown extends Component {
 			clearInterval(this.interval);
 	}
 	render() {
-		const t = getTimeParts(this.state.t - beebeeArrives);
+		const t = getTimeParts(this.state.t.getTime() - beebeeArrives.getTime());
 
 		return (
 			<div className={'container'}>

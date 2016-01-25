@@ -1,4 +1,5 @@
 var port = process.env.PORT || 9000,
+    ip = process.env.IP || "0.0.0.0",
     isProduction = process.env.NODE_ENV == 'production',
     clientDir = __dirname + (isProduction ? '/dist/' : '/src/'),
     assetDir = __dirname + '/assets',
@@ -16,9 +17,9 @@ app.use('/src', express.static(clientDir));
 
 //Index Route
 app.get('/*', function(req, res){
-    res.sendFile(__dirname + (isProduction ? '/index-built.html' : '/index.html'));
+    res.sendFile(__dirname + (isProduction ? '/index_built.html' : '/index.html'));
 });
 
 //Start Listening
-app.listen(port);
+app.listen(port, ip);
 console.log('Express server listening on port %d in %s mode', port, app.settings.env);
