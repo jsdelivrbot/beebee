@@ -1,0 +1,1 @@
+module.exports = require("npm:audiobuffer-slice@0.0.4/audiobuffer-slice");

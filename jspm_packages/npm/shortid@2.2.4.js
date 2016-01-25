@@ -1,0 +1,1 @@
+module.exports = require("npm:shortid@2.2.4/index");

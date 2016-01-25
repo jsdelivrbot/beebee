@@ -1,0 +1,51 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.0.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   'patch' ]
+2 info using npm@3.3.9
+3 info using node@v5.0.0
+4 info git [ 'status', '--porcelain' ]
+5 info lifecycle beebee@1.0.1~preversion: beebee@1.0.1
+6 silly lifecycle beebee@1.0.1~preversion: no script for preversion, continuing
+7 verbose version.write data { name: 'beebee',
+7 verbose version.write   version: '1.0.1',
+7 verbose version.write   description: 'a beebee sees mister countdown timer',
+7 verbose version.write   main: 'server.js',
+7 verbose version.write   scripts:
+7 verbose version.write    { setup: 'npm i && jspm i',
+7 verbose version.write      'build:css': 'stylus assets/stylus/app.styl --out assets/css --sourcemap --compress',
+7 verbose version.write      'watch:css': 'stylus assets/stylus/app.styl --out assets/css --sourcemap --compress --watch',
+7 verbose version.write      'build:js': 'jspm bundle-sfx main dist/main-built.js',
+7 verbose version.write      build: 'npm run build:css && npm run build:js',
+7 verbose version.write      start: 'node server.js' },
+7 verbose version.write   author: 'Tim Moran',
+7 verbose version.write   license: 'MIT',
+7 verbose version.write   devDependencies: { jspm: '^0.16.13' },
+7 verbose version.write   dependencies:
+7 verbose version.write    { express: '^4.13.3',
+7 verbose version.write      react: '^0.14.0',
+7 verbose version.write      stylus: '^0.52.4',
+7 verbose version.write      'react-dom': '^0.14.0' } } to package.json
+8 info lifecycle beebee@1.0.1~version: beebee@1.0.1
+9 silly lifecycle beebee@1.0.1~version: no script for version, continuing
+10 info git [ 'add', 'package.json' ]
+11 verbose stack Error: Command failed: git add package.json
+11 verbose stack fatal: pathspec 'package.json' did not match any files
+11 verbose stack
+11 verbose stack     at ChildProcess.exithandler (child_process.js:203:12)
+11 verbose stack     at emitTwo (events.js:87:13)
+11 verbose stack     at ChildProcess.emit (events.js:172:7)
+11 verbose stack     at maybeClose (internal/child_process.js:818:16)
+11 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+12 verbose cwd /Users/tyrsius/Projects/beebee/assets
+13 error Darwin 14.5.0
+14 error argv "/usr/local/Cellar/node/5.0.0/bin/node" "/usr/local/bin/npm" "version" "patch"
+15 error node v5.0.0
+16 error npm  v3.3.9
+17 error code 128
+18 error Command failed: git add package.json
+18 error fatal: pathspec 'package.json' did not match any files
+19 error If you need help, you may report this error at:
+19 error     <https://github.com/npm/npm/issues>
+20 verbose exit [ 1, true ]

@@ -1,0 +1,1 @@
+module.exports = require("npm:id3js@1.1.3/dist/id3");
