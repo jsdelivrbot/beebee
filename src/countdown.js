@@ -2,13 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
 
 const misterLeaves = new Date('01/24/16 12:10:00 GMT-1000');
-const beebeeArrives = new Date('02/02/16 7:38:00 GMT-8000');
-beebeeArrives.setDate(2); //Fuck you JS aprser
+const beebeeArrives = new Date('02/02/16 19:38:00 GMT-0800');
 
-//This math is completely fucked
-const getTimeParts = function(timespan) {
+const getTimeParts = function(begin, end) {
 	let result = {};
-	var duration = moment.duration(Math.abs(timespan));
+	var duration = moment.duration(end.getTime() - begin.getTime());
 
 	result.seconds = duration.seconds();
 	result.minutes = duration.minutes();
@@ -32,7 +30,7 @@ export default class Countdown extends Component {
 			clearInterval(this.interval);
 	}
 	render() {
-		const t = getTimeParts(this.state.t.getTime() - beebeeArrives.getTime());
+		const t = getTimeParts(this.state.t, beebeeArrives);
 
 		return (
 			<div className={'container'}>
