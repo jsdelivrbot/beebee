@@ -10,9 +10,9 @@ var port = process.env.PORT || 9000,
 
 //Configure
 app.use('/jspm_packages', express.static(jspmDir));
+app.use(jspmConfigName, express.static(jspmConfig));
 app.use(express.static(assetDir));
 app.use('/src', express.static(clientDir));
-app.use(jspmConfigName, express.static(jspmConfig));
 
 //Index Route
 app.get('/*', function(req, res){
