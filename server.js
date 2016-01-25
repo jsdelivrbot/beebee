@@ -1,5 +1,4 @@
 var port = process.env.PORT || 9000,
-    ip = process.env.IP || "0.0.0.0",
     isProduction = process.env.NODE_ENV == 'production',
     clientDir = __dirname + (isProduction ? '/dist/' : '/src/'),
     assetDir = __dirname + '/assets',
@@ -21,5 +20,5 @@ app.get('/*', function(req, res){
 });
 
 //Start Listening
-app.listen(port, ip);
+app.listen(port);
 console.log('Express server listening on port %d in %s mode', port, app.settings.env);
