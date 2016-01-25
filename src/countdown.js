@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const misterLeaves = new Date('01/24/16 12:10:00 GMT-1000');
 const beebeeArrives = new Date('02/02/16 7:38:00 GMT-8000');
-
+beebeeArrives.setDate(2); //Fuck you JS aprser
 
 //This math is completely fucked
 const getTimeParts = function(timespan) {
