@@ -460,5 +460,8 @@
   "npm:lru-cache@2.7.3": {},
   "npm:audiobuffer-slice@0.0.4": {
     "tape": "npm:tape@^3.0.3"
+  },
+  "npm:moment@2.11.1": {
+    "process": "github:jspm/nodelibs-process@^0.1.0"
   }
 }

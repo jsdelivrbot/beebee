@@ -31,6 +31,7 @@ System.config({
     "id3js": "npm:id3js@1.1.3",
     "immutable": "npm:immutable@3.7.5",
     "localforage": "npm:localforage@1.3.0",
+    "moment": "npm:moment@2.11.1",
     "react": "npm:react@0.14.3",
     "react-dom": "npm:react-dom@0.14.0",
     "react-file-input": "npm:react-file-input@0.2.5",
@@ -322,6 +323,9 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "sigmund": "npm:sigmund@1.0.1"
+    },
+    "npm:moment@2.11.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:parse-asn1@3.0.2": {
       "asn1.js": "npm:asn1.js@2.2.1",

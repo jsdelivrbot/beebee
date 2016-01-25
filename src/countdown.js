@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import moment from 'moment';
 
 const misterLeaves = new Date('01/24/16 12:10:00 GMT-1000');
 const beebeeArrives = new Date('02/02/16 7:38:00 GMT-8000');
@@ -7,10 +8,13 @@ const beebeeArrives = new Date('02/02/16 7:38:00 GMT-8000');
 //This math is completely fucked
 const getTimeParts = function(timespan) {
 	let result = {};
-	result.seconds = Math.abs(Math.floor((timespan / 1000)) % 60);
-	result.minutes = Math.abs(Math.floor((timespan / 1000 / 60) % 60));
-	result.hours = Math.abs(Math.floor((timespan / 1000 / 60 / 60) % 24));
-	result.days = Math.abs(Math.floor(timespan / 1000 / 60 / 60 / 24));
+	var duration = moment.duration(Math.abs(timespan));
+
+	result.seconds = duration.seconds();
+	result.minutes = duration.minutes();
+	result.hours = duration.hours();
+	result.days = duration.days();
+
 	return result;
 };
 
