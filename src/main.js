@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Countdown from 'countdown';
+import App from 'app';
 
 const appRoot = document.getElementById('app-host');
 
-render(<Countdown />, appRoot);
+render(<App />, appRoot);
