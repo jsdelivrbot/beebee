@@ -4,9 +4,14 @@ import moment from 'moment';
 const misterLeaves = new Date('01/24/16 12:10:00 GMT-1000');
 const beebeeArrives = new Date('02/02/16 19:38:00 GMT-0800');
 
-const getTimeParts = function(begin, end) {
+function getTimeParts(current) {
 	let result = {};
-	var duration = moment.duration(end.getTime() - begin.getTime());
+
+	if (beebeeArrives.getTime() - current.getTime() <= 0) {
+		return null;
+	}
+
+	var duration = moment.duration(beebeeArrives.getTime() - current.getTime());
 
 	result.seconds = duration.seconds();
 	result.minutes = duration.minutes();
@@ -30,7 +35,15 @@ export default class Countdown extends Component {
 			clearInterval(this.interval);
 	}
 	render() {
-		const t = getTimeParts(this.state.t, beebeeArrives);
+		const t = getTimeParts(this.state.t);
+
+		if (!t) return (
+			<div className={'container'}>
+				<div className={'complete'}>
+					<h1>BeeBee is with Mister!</h1>
+				</div>
+			</div>
+		);
 
 		return (
 			<div className={'container'}>
