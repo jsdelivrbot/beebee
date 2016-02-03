@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
 import Countdown from 'countdown';
 
-const misterLeaves = new Date('01/24/16 12:10:00 GMT-1000');
-const beebeeArrives = new Date('02/02/16 19:38:00 GMT-0800');
+const misterLeaves = new Date('02/03/16 08:30:00 GMT-0800');
+const beebeeArrives = new Date('02/03/16 11:45:00 GMT-0800');
 
 function getTimeParts(start, end) {
 	let result = {};
