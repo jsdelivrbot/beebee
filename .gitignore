@@ -48,7 +48,7 @@ bower_components
 .idea
 .DS_STORE
 
-*.sublime-workspace
+#*.sublime-workspace
 
 main-built.js
 
